@@ -37,6 +37,11 @@ class FrequentDirections:
          
     def get(self):
         return self._sketch[:self.ell,:]
+
+    def reset(self):
+        self._sketch = zeros( (self.m, self.d) )
+        self.nextZeroRow = 0
+
     
 if __name__=='__main__':
     import sys
